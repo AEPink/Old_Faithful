@@ -43,6 +43,12 @@ png(filename='images/eruption_density.png')
 hist(df$eruptions)
 dev.off()
 ```
+Interesting! Both distributions seem to be bimodal, let's look at the scatter of one against the other. 
+
+```{r}
+plot(df$waiting, df$eruptions)
+```
+
 
 
 ## R Markdown
