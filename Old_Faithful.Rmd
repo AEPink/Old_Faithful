@@ -38,14 +38,14 @@ hist(df$waiting)
 ```
 
 We can save them as normal as well:
-```{r}
+```{r, echo=FALSE, include=FALSE}
 png(filename='images/eruption_density.png')
 hist(df$eruptions)
 dev.off()
 ```
 Interesting! Both distributions seem to be bimodal, let's look at the scatter of one against the other. 
 
-```{r}
+```{r, echo=FALSE}
 plot(df$waiting, df$eruptions)
 ```
 
