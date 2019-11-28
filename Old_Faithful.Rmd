@@ -25,8 +25,25 @@ df <- datasets::faithful
 We can no save this in the 'data' folder as a `csv` for maximum interoptability. 
 
 ```{r}
-readr::write_csv(x=df, path='data/old_faithful.csv)
+readr::write_csv(x=df, path='data/old_faithful.csv')
 ```
+
+# Plot marginal distributions
+
+We can plot marginal distributions for each variable.
+
+```{r}
+hist(df$eruptions)
+hist(df$waiting)
+```
+
+We can save them as normal as well:
+```{r}
+png(filename='images/eruption_density.png')
+hist(df$eruptions)
+dev.off()
+```
+
 
 ## R Markdown
 
